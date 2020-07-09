@@ -2,6 +2,7 @@ import qs from 'qs'
 
 export default function({ $axios, $toast, app }) {
   $axios.onRequest((config) => {
+    // config.url = config.url.replace('api', 'bbs_api')
     config.headers.common['X-Client'] = 'bbs-go-site'
     config.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
     const userToken = app.$cookies.get('userToken')

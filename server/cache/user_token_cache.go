@@ -4,8 +4,8 @@ import (
 	"time"
 
 	"github.com/goburrow/cache"
-	"github.com/mlogclub/simple"
 
+	databases "bbs-go/bases"
 	"bbs-go/model"
 	"bbs-go/repositories"
 )
@@ -20,7 +20,7 @@ func newUserTokenCache() *userTokenCache {
 	return &userTokenCache{
 		cache: cache.NewLoadingCache(
 			func(key cache.Key) (value cache.Value, e error) {
-				value = repositories.UserTokenRepository.GetByToken(simple.DB(), key.(string))
+				value = repositories.UserTokenRepository.GetByToken(databases.DB(), key.(string))
 				return
 			},
 			cache.WithMaximumSize(1000),

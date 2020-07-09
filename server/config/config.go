@@ -17,7 +17,8 @@ type Config struct {
 	ShowSql    bool   `yaml:"ShowSql"`    // 是否显示日志
 	StaticPath string `yaml:"StaticPath"` // 静态文件目录
 
-	MySqlUrl string `yaml:"MySqlUrl"` // 数据库连接地址
+	MySqlUrl     string `yaml:"MySqlUrl"`     // 数据库连接地址
+	ROBOMySqlUrl string `yaml:"ROBOMySqlUrl"` // 数据库连接地址
 
 	// Github
 	Github struct {

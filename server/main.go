@@ -9,6 +9,7 @@ import (
 	"github.com/sirupsen/logrus"
 
 	"bbs-go/app"
+	databases "bbs-go/bases"
 	"bbs-go/config"
 	"bbs-go/model"
 )
@@ -25,6 +26,11 @@ func init() {
 	if file, err := os.OpenFile(config.Instance.LogFile, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666); err == nil {
 		logrus.SetOutput(file)
 	} else {
+		logrus.Error(err)
+	}
+
+	// 连接数据库
+	if err := databases.OpenMySql(config.Instance.ROBOMySqlUrl, 10, 20, config.Instance.ShowSql, model.ROBOModels...); err != nil {
 		logrus.Error(err)
 	}
 

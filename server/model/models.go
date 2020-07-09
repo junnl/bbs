@@ -2,10 +2,15 @@ package model
 
 import (
 	"database/sql"
+	"time"
 )
 
+var ROBOModels = []interface{}{
+	&ROBOUser{}, &UserToken{},
+}
+
 var Models = []interface{}{
-	&User{}, &UserToken{}, &Tag{}, &Article{}, &ArticleTag{}, &Comment{}, &Favorite{}, &Topic{}, &TopicNode{},
+	&User{}, &Tag{}, &Article{}, &ArticleTag{}, &Comment{}, &Favorite{}, &Topic{}, &TopicNode{},
 	&TopicTag{}, &UserLike{}, &Tweet{}, &Message{}, &SysConfig{}, &Project{}, &Link{}, &ThirdAccount{},
 	&UserScore{}, &UserScoreLog{}, &OperateLog{}, &EmailCode{},
 }
@@ -14,8 +19,27 @@ type Model struct {
 	Id int64 `gorm:"PRIMARY_KEY;AUTO_INCREMENT" json:"id" form:"id"`
 }
 
+type ROBOUser struct {
+	Id            int64     `gorm:"PRIMARY_KEY;AUTO_INCREMENT" json:"id" form:"id"`
+	NickName      string    `gorm:"size:16;" json:"nickname" form:"nickname"`
+	PasswrodHash  string    `gorm:"size:512" json:"password" form:"password"`                         // 密码
+	Mobile        string    `gorm:"size:512" json:"mobile" form:"mobile"`                             // 手机号
+	Email         string    `gorm:"size:512" json:"email" form:"email"`                               // 密码
+	HeadImg       string    `gorm:"size:512" json:"handImg" form:"handImg"`                           // 密码
+	IsSuperuser   bool      `gorm:"not null;default:false" json:"isSuperuser" form:"isSuperuser"`     //
+	IsInvestor    bool      `gorm:"not null;default:false" json:"isInvestor" form:"isInvestor"`       //
+	IsAdviser     bool      `gorm:"not null;default:false" json:"isAdviser" form:"isAdviser"`         //
+	IsActive      bool      `gorm:"not null;default:false" json:"isActive" form:"isActive"`           //
+	LastLogin     time.Time `gorm:"not null" json:"lastLogin" form:"lastLogin"`                       //
+	ResetPassword bool      `gorm:"not null;default:false" json:"resetPassword" form:"resetPassword"` //
+}
+
+func (v ROBOUser) TableName() string {
+	return "users"
+}
+
 type User struct {
-	Model
+	Id               int64          `gorm:"PRIMARY_KEY;" json:"id" form:"id"`
 	Username         sql.NullString `gorm:"size:32;unique;" json:"username" form:"username"`                    // 用户名
 	Email            sql.NullString `gorm:"size:128;unique;" json:"email" form:"email"`                         // 邮箱
 	EmailVerified    bool           `gorm:"not null;default:false" json:"emailVerified" form:"emailVerified"`   // 邮箱是否验证
@@ -25,8 +49,8 @@ type User struct {
 	HomePage         string         `gorm:"size:1024" json:"homePage" form:"homePage"`                          // 个人主页
 	Description      string         `gorm:"type:text" json:"description" form:"description"`                    // 个人描述
 	Status           int            `gorm:"index:idx_user_status;not null" json:"status" form:"status"`         // 状态
-	TopicCount       int            `gorm:"not null" json:"topicCount" form:"topicCount"`                       // 帖子数量
-	CommentCount     int            `gorm:"not null" json:"commentCount" form:"commentCount"`                   // 跟帖数量
+	TopicCount       int            `gorm:"not null;default:0" json:"topicCount" form:"topicCount"`             // 帖子数量
+	CommentCount     int            `gorm:"not null;default:0" json:"commentCount" form:"commentCount"`         // 跟帖数量
 	Roles            string         `gorm:"type:text" json:"roles" form:"roles"`                                // 角色
 	Type             int            `gorm:"not null" json:"type" form:"type"`                                   // 用户类型
 	ForbiddenEndTime int64          `gorm:"not null;default:0" json:"forbiddenEndTime" form:"forbiddenEndTime"` // 禁言结束时间
@@ -36,11 +60,18 @@ type User struct {
 
 type UserToken struct {
 	Model
-	Token      string `gorm:"size:32;unique;not null" json:"token" form:"token"`
-	UserId     int64  `gorm:"not null;index:idx_user_token_user_id;" json:"userId" form:"userId"`
-	ExpiredAt  int64  `gorm:"not null" json:"expiredAt" form:"expiredAt"`
-	Status     int    `gorm:"not null;index:idx_user_token_status" json:"status" form:"status"`
-	CreateTime int64  `gorm:"not null" json:"createTime" form:"createTime"`
+	Key        string    `gorm:"size:32;unique;not null" json:"key" form:"key"`
+	RefreshKey string    `gorm:"size:32;unique;not null" json:"refreshKey" form:"refreshKey"`
+	UserId     int64     `gorm:"not null;" json:"userId" form:"userId"`
+	ExpiresAt  time.Time `gorm:"not null" json:"expiredAt" form:"expiredAt"`
+	// Status     int       `gorm:"not null;index:idx_user_token_status" json:"status" form:"status"`
+	IsDeleted  bool      `gorm:"not null;default:false" json:"isDeleted" form:"isDeleted"`
+	CreateTime time.Time `gorm:"not null" json:"createTime" form:"createTime"`
+	UpdateTime time.Time `gorm:"not null" json:"updateTime" form:"updateTime"`
+}
+
+func (v UserToken) TableName() string {
+	return "tokens"
 }
 
 type ThirdAccount struct {

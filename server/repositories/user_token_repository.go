@@ -20,7 +20,7 @@ func (r *userTokenRepository) GetByToken(db *gorm.DB, token string) *model.UserT
 	if len(token) == 0 {
 		return nil
 	}
-	return r.Take(db, "token = ?", token)
+	return r.Take(db, "tokens.key = ?", token)
 }
 
 func (r *userTokenRepository) Get(db *gorm.DB, id int64) *model.UserToken {
