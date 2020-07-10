@@ -12,7 +12,7 @@
             </h1>
             <div class="project-meta">
               <span>
-                <a :href="'/user/' + project.user.id">{{
+                <a :href="'/bbs/user/' + project.user.id">{{
                   project.user.nickname
                 }}</a>
               </span>

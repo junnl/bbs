@@ -37,7 +37,7 @@
           <img :src="item.user.smallAvatar" class="avatar" />
           <div class="article-right">
             <div class="article-title">
-              <a :href="'/article/' + item.id" target="_blank">{{
+              <a :href="'/bbs/article/' + item.id" target="_blank">{{
                 item.title
               }}</a>
             </div>
@@ -63,7 +63,7 @@
                 >
                 <a
                   v-if="item.status === 2"
-                  :href="'/article/edit/' + item.id"
+                  :href="'/bbs/article/edit/' + item.id"
                   class="action-item btn"
                   >修改</a
                 >

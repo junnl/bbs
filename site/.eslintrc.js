@@ -19,6 +19,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    "no-mixed-spaces-and-tabs": [0],
     'no-unused-vars': [
       'warn',
       {

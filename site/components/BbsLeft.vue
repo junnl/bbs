@@ -3,17 +3,17 @@
     <nav class="dock-nav">
       <ul>
         <li :class="{ active: currentNodeId === 0 }">
-          <a href="/topics/node/newest">最新</a>
+          <a href="/bbs/topics/node/newest">最新</a>
         </li>
         <li :class="{ active: currentNodeId === -1 }">
-          <a href="/topics/node/recommend">推荐</a>
+          <a href="/bbs/topics/node/recommend">推荐</a>
         </li>
         <li
           v-for="node in nodes"
           :key="node.nodeId"
           :class="{ active: currentNodeId === node.nodeId }"
         >
-          <a :href="'/topics/node/' + node.nodeId">{{ node.name }}</a>
+          <a :href="'/bbs/topics/node/' + node.nodeId">{{ node.name }}</a>
         </li>
       </ul>
     </nav>

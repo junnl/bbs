@@ -3,7 +3,7 @@
     <div class="dropdown-trigger">
       <a
         :class="{ 'msg-flicker': msgcount > 0 }"
-        href="/user/messages"
+        href="/bbs/user/messages"
         class="msgicon"
         title="消息"
       >
@@ -16,12 +16,12 @@
         <div class="msglist">
           <ul>
             <li v-for="msg in messages" :key="msg.messageId" class="msg-item">
-              <a href="/user/messages">{{ msg.content }}</a>
+              <a href="/bbs/user/messages">{{ msg.content }}</a>
             </li>
           </ul>
         </div>
         <div class="msgfooter">
-          <a href="/user/messages">消息中心&gt;&gt;</a>
+          <a href="/bbs/user/messages">消息中心&gt;&gt;</a>
         </div>
       </div>
     </div>

@@ -31,7 +31,7 @@
         class="navbar-menu"
       >
         <div class="navbar-start">
-          <a class="navbar-item" href="/admin">
+          <a class="navbar-item" href="/bbs/admin">
             <i class="iconfont icon-dashboard"></i>
             <span>后台</span>
           </a>
@@ -42,22 +42,22 @@
               <span>内容</span>
             </a>
             <div class="navbar-dropdown">
-              <a class="navbar-item" href="/admin/topics">
+              <a class="navbar-item" href="/bbs/admin/topics">
                 <i class="iconfont icon-topic"></i>
                 <span>话题</span>
               </a>
 
-              <a class="navbar-item" href="/admin/tweets">
+              <a class="navbar-item" href="/bbs/admin/tweets">
                 <i class="iconfont icon-tweet"></i>
                 <span>动态</span>
               </a>
 
-              <a class="navbar-item" href="/admin/articles">
+              <a class="navbar-item" href="/bbs/admin/articles">
                 <i class="iconfont icon-article"></i>
                 <span>文章</span>
               </a>
 
-              <a class="navbar-item" href="/admin/comments">
+              <a class="navbar-item" href="/bbs/admin/comments">
                 <i class="iconfont icon-comments"></i>
                 <span>评论</span>
               </a>
@@ -70,34 +70,34 @@
               <span>节点</span>
             </a>
             <div class="navbar-dropdown">
-              <a class="navbar-item" href="/admin/topics/nodes">
+              <a class="navbar-item" href="/bbs/admin/topics/nodes">
                 <i class="iconfont icon-tag"></i>
                 <span>节点</span>
               </a>
-              <a class="navbar-item" href="/admin/tags">
+              <a class="navbar-item" href="/bbs/admin/tags">
                 <i class="iconfont icon-tags"></i>
                 <span>标签</span>
               </a>
             </div>
           </div>
 
-          <a class="navbar-item" href="/admin/users">
+          <a class="navbar-item" href="/bbs/admin/users">
             <i class="iconfont icon-username"></i>
             <span>用户</span>
           </a>
-          <a class="navbar-item" href="/admin/users/score">
+          <a class="navbar-item" href="/bbs/admin/users/score">
             <i class="iconfont icon-score"></i>
             <span>积分</span>
           </a>
-          <a class="navbar-item" href="/admin/links">
+          <a class="navbar-item" href="/bbs/admin/links">
             <i class="iconfont icon-link"></i>
             <span>友链</span>
           </a>
-          <a class="navbar-item" href="/admin/settings">
+          <a class="navbar-item" href="/bbs/admin/settings">
             <i class="iconfont icon-setting"></i>
             <span>设置</span>
           </a>
-          <a class="navbar-item" href="/admin/operate-log">
+          <a class="navbar-item" href="/bbs/admin/operate-log">
             <i class="iconfont icon-log"></i>
             <span>操作日志</span>
           </a>
@@ -106,7 +106,7 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-success" href="/" target="_blank">
+              <a class="button is-success" href="/bbs/" target="_blank">
                 <strong>查看网站</strong>
               </a>
             </div>

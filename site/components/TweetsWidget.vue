@@ -1,12 +1,12 @@
 <template>
   <div v-if="tweets && tweets.length" class="widget">
     <div class="widget-header">
-      最新动态<span class="slot"><a href="/tweets">更多</a></span>
+      最新动态<span class="slot"><a href="/bbs/tweets">更多</a></span>
     </div>
     <div class="widget-content">
       <ul class="tweets-widget">
         <li v-for="tweet in tweets" :key="tweet.tweetId">
-          <a :href="'/tweet/' + tweet.tweetId" class="tweet-content">
+          <a :href="'/bbs/tweet/' + tweet.tweetId" class="tweet-content">
             {{ tweet.content }}
             <i
               v-if="tweet.imageList && tweet.imageList.length"

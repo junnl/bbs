@@ -6,7 +6,7 @@
         <topic-list :topics="topicsPage.results" :show-ad="true" />
         <pagination
           :page="topicsPage.page"
-          :url-prefix="'/topics/' + tag.tagId + '?p='"
+          :url-prefix="'/bbs/topics/' + tag.tagId + '?p='"
         />
       </div>
       <div class="right-container">

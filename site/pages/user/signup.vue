@@ -146,7 +146,7 @@ export default {
   methods: {
     async signup() {
       try {
-        await this.$store.dispatch('user/signup', {
+        await this.$store.dispatch('bbs/user/signup', {
           captchaId: this.captchaId,
           captchaCode: this.captchaCode,
           nickname: this.nickname,
@@ -160,7 +160,7 @@ export default {
           utils.linkTo(this.ref)
         } else {
           // 跳到个人主页
-          utils.linkTo('/user/settings')
+          utils.linkTo('/bbs/user/settings')
         }
       } catch (err) {
         this.$toast.error(err.message || err)

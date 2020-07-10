@@ -58,9 +58,10 @@ func (s *userTokenService) GetCurrentUserId(ctx iris.Context) int64 {
 }
 
 // 后台创建用户 (无验证)
-func (s *userTokenService) SimpleSignUp(username, email, nickname, password, avatarUrl string) (*model.User, error) {
+func (s *userTokenService) SimpleSignUp(userID int64, username, email, nickname, password, avatarUrl string) (*model.User, error) {
 
 	user := &model.User{
+		Id:         userID,
 		Username:   simple.SqlNullString(username),
 		Email:      simple.SqlNullString(email),
 		Avatar:     avatarUrl,
@@ -97,11 +98,11 @@ func (s *userTokenService) GetCurrent(ctx iris.Context) *model.User {
 	if userToken.ExpiresAt.Unix() <= time.Now().Unix() {
 		return nil
 	}
-	user := cache.UserCache.Get(userToken.UserId)
+	user := repositories.UserRepository.Get(simple.DB(), userToken.UserId)
 	if user == nil {
 		roboUser := repositories.UserROBORepository.Get(databases.DB(), userToken.UserId)
 		userName := strconv.FormatInt(roboUser.Id, 10)
-		newUser, err := s.SimpleSignUp(userName, roboUser.Email, roboUser.NickName, roboUser.PasswrodHash, roboUser.HeadImg)
+		newUser, err := s.SimpleSignUp(roboUser.Id, userName, roboUser.Email, roboUser.NickName, roboUser.PasswrodHash, roboUser.HeadImg)
 		if err != nil {
 			return nil
 		}

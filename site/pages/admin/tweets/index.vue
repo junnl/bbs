@@ -33,7 +33,7 @@
               <div class="account-group">
                 <div>
                   <a
-                    :href="'/user/' + tweet.user.id"
+                    :href="'/bbs/user/' + tweet.user.id"
                     :title="tweet.user.nickname"
                   >
                     <img :src="tweet.user.smallAvatar" class="avatar size-45" />
@@ -42,7 +42,7 @@
                 <div class="pin-header-content">
                   <div>
                     <a
-                      :href="'/user/' + tweet.user.id"
+                      :href="'/bbs/user/' + tweet.user.id"
                       :title="tweet.user.nickname"
                       target="_blank"
                       class="nickname"
@@ -71,7 +71,7 @@
             </div>
             <div class="pin-content-row">
               <a
-                :href="'/tweet/' + tweet.tweetId"
+                :href="'/bbs/tweet/' + tweet.tweetId"
                 target="_blank"
                 class="content-box"
                 >{{ tweet.content }}</a
@@ -86,7 +86,7 @@
                 :key="image + index"
               >
                 <a
-                  :href="'/tweet/' + tweet.tweetId"
+                  :href="'/bbs/tweet/' + tweet.tweetId"
                   target="_blank"
                   class="image-item"
                 >
@@ -106,7 +106,7 @@
                   </div>
                 </div>
                 <a
-                  :href="'/tweet/' + tweet.tweetId"
+                  :href="'/bbs/tweet/' + tweet.tweetId"
                   target="_blank"
                   class="comment-action action"
                 >

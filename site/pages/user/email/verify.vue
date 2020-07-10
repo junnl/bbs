@@ -7,14 +7,14 @@
           <div class="widget-content">
             <div v-if="success">
               恭喜，邮箱验证成功。你的邮箱为：{{ currentUser.email }}，<a
-                href="/user/settings"
+                href="/bbs/user/settings"
                 >点击前往资料页</a
               >
             </div>
             <div v-else>
               邮箱验证失败<span v-if="message" class="has-text-danger"
                 >&nbsp;原因：{{ message }}</span
-              >，请前往&nbsp;<a href="/user/settings">编辑资料</a
+              >，请前往&nbsp;<a href="/bbs/user/settings">编辑资料</a
               >&nbsp;页面尝试重新发送验证邮件。
             </div>
           </div>

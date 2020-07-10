@@ -6,11 +6,11 @@
     <div class="widget-content">
       <ul class="score-rank">
         <li v-for="user in scoreRank" :key="user.id">
-          <a :href="'/user/' + user.id" class="score-user-avatar">
+          <a :href="'/bbs/user/' + user.id" class="score-user-avatar">
             <img :src="user.smallAvatar" class="avatar size-30" />
           </a>
           <div class="score-user-info">
-            <a :href="'/user/' + user.id">{{ user.nickname }}</a>
+            <a :href="'/bbs/user/' + user.id">{{ user.nickname }}</a>
             <p>{{ user.topicCount }} 帖子 • {{ user.commentCount }} 评论</p>
           </div>
           <div class="score-rank-info">

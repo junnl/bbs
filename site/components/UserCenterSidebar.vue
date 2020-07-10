@@ -17,7 +17,7 @@
           <a
             v-if="isOwner"
             class="score-log"
-            href="/user/scores"
+            href="/bbs/user/scores"
             target="_blank"
             >积分详情&gt;&gt;</a
           >
@@ -25,15 +25,15 @@
         <ul v-if="isOwner" class="operations">
           <li>
             <i class="iconfont icon-edit" />
-            <a href="/user/settings">&nbsp;编辑资料</a>
+            <a href="/bbs/user/settings">&nbsp;编辑资料</a>
           </li>
           <li>
             <i class="iconfont icon-message" />
-            <a href="/user/messages">&nbsp;消息</a>
+            <a href="/bbs/user/messages">&nbsp;消息</a>
           </li>
           <li>
             <i class="iconfont icon-favorites" />
-            <a href="/user/favorites">&nbsp;收藏</a>
+            <a href="/bbs/user/favorites">&nbsp;收藏</a>
           </li>
         </ul>
         <ul v-if="isAdmin" class="operations">

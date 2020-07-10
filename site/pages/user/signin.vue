@@ -148,7 +148,7 @@ export default {
           utils.linkTo(this.ref)
         } else {
           // 跳到个人主页
-          utils.linkTo('/user/' + user.id)
+          utils.linkTo('/bbs/user/' + user.id)
         }
       } catch (e) {
         this.$toast.error(e.message || e)
@@ -183,7 +183,7 @@ export default {
             if (me.ref && !utils.isSigninUrl(me.ref)) {
               utils.linkTo(me.ref)
             } else {
-              utils.linkTo('/')
+              utils.linkTo('/bbs/')
             }
           }
         })

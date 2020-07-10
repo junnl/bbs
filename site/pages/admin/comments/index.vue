@@ -54,7 +54,7 @@
             <div class="content">
               <div class="meta">
                 <span class="nickname"
-                  ><a :href="'/user/' + item.user.id" target="_blank">{{
+                  ><a :href="'/bbs/user/' + item.user.id" target="_blank">{{
                     item.user.nickname
                   }}</a></span
                 >
@@ -65,13 +65,13 @@
                   >@{{ item.createTime | formatDate }}</span
                 >
                 <span v-if="item.entityType === 'article'">
-                  <a :href="'/article/' + item.entityId" target="_blank"
+                  <a :href="'/bbs/article/' + item.entityId" target="_blank"
                     >文章：{{ item.entityId }}</a
                   >
                 </span>
 
                 <span v-if="item.entityType === 'topic'">
-                  <a :href="'/topic/' + item.entityId" target="_blank"
+                  <a :href="'/bbs/topic/' + item.entityId" target="_blank"
                     >话题：{{ item.entityId }}</a
                   >
                 </span>

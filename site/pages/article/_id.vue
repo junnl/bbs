@@ -16,7 +16,7 @@
                 <span class="article-meta-item">
                   由
                   <a
-                    :href="'/user/' + article.user.id"
+                    :href="'/bbs/user/' + article.user.id"
                     class="article-author"
                     itemprop="author"
                     itemscope
@@ -41,7 +41,7 @@
                     :key="tag.tagId"
                     class="article-tag tag"
                   >
-                    <a :href="'/articles/' + tag.tagId" class>{{
+                    <a :href="'/bbs/articles/' + tag.tagId" class>{{
                       tag.tagName
                     }}</a>
                   </span>
@@ -54,7 +54,7 @@
                     </a>
                   </span>
                   <span v-if="hasPermission">
-                    <a :href="'/article/edit/' + article.articleId">
+                    <a :href="'/bbs/article/edit/' + article.articleId">
                       <i class="iconfont icon-edit" />&nbsp;修改
                     </a>
                   </span>
@@ -121,7 +121,7 @@
             <ul>
               <li v-for="a in relatedArticles" :key="a.articleId">
                 <a
-                  :href="'/article/' + a.articleId"
+                  :href="'/bbs/article/' + a.articleId"
                   :title="a.title"
                   class="article-related-title"
                   target="_blank"
@@ -141,7 +141,7 @@
             <ul>
               <li v-for="a in nearlyArticles" :key="a.articleId">
                 <a
-                  :href="'/article/' + a.articleId"
+                  :href="'/bbs/article/' + a.articleId"
                   :title="a.title"
                   class="article-related-title"
                   target="_blank"

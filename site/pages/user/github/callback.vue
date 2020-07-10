@@ -43,12 +43,12 @@ export default {
           utils.linkTo(this.ref)
         } else {
           // 跳到个人主页
-          utils.linkTo('/user/' + user.id)
+          utils.linkTo('/bbs/user/' + user.id)
         }
       } catch (e) {
         this.$toast.error('登录失败：' + (e.message || e), {
           onComplete() {
-            utils.linkTo('/user/signin')
+            utils.linkTo('/bbs/user/signin')
           }
         })
       } finally {

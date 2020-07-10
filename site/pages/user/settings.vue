@@ -7,10 +7,10 @@
             <nav class="breadcrumb">
               <ul>
                 <li>
-                  <a href="/">首页</a>
+                  <a href="/bbs/">首页</a>
                 </li>
                 <li>
-                  <a :href="'/user/' + user.id">{{ user.nickname }}</a>
+                  <a :href="'/bbs/user/' + user.id">{{ user.nickname }}</a>
                 </li>
                 <li class="is-active">
                   <a href="#" aria-current="page">编辑资料</a>

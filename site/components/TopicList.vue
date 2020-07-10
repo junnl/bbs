@@ -15,13 +15,16 @@
       <article itemscope itemtype="http://schema.org/BlogPosting">
         <div class="topic-header">
           <div class="topic-header-left">
-            <a :href="'/user/' + topic.user.id" :title="topic.user.nickname">
+            <a
+              :href="'/bbs/user/' + topic.user.id"
+              :title="topic.user.nickname"
+            >
               <img :src="topic.user.smallAvatar" class="avatar" />
             </a>
           </div>
           <div class="topic-header-center">
             <h1 class="topic-title" itemprop="headline">
-              <a :href="'/topic/' + topic.topicId" :title="topic.title">{{
+              <a :href="'/bbs/topic/' + topic.topicId" :title="topic.title">{{
                 topic.title
               }}</a>
             </h1>
@@ -33,7 +36,7 @@
                 itemscope
                 itemtype="http://schema.org/Person"
               >
-                <a :href="'/user/' + topic.user.id" itemprop="name">{{
+                <a :href="'/bbs/user/' + topic.user.id" itemprop="name">{{
                   topic.user.nickname
                 }}</a>
               </span>
@@ -49,14 +52,16 @@
               <span class="meta-item">
                 <a
                   v-if="topic.node"
-                  :href="'/topics/node/' + topic.node.nodeId"
+                  :href="'/bbs/topics/node/' + topic.node.nodeId"
                   class="node"
                   >{{ topic.node.name }}</a
                 >
               </span>
               <span class="meta-item">
                 <span v-for="tag in topic.tags" :key="tag.tagId" class="tag">
-                  <a :href="'/topics/tag/' + tag.tagId">{{ tag.tagName }}</a>
+                  <a :href="'/bbs/topics/tag/' + tag.tagId">{{
+                    tag.tagName
+                  }}</a>
                 </span>
               </span>
             </div>

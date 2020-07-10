@@ -28,7 +28,7 @@
                   <ul>
                     <li v-for="a in recommendArticles" :key="a.articleId">
                       <a
-                        :href="'/article/' + a.articleId"
+                        :href="'/bbs/article/' + a.articleId"
                         :title="a.title"
                         target="_blank"
                         >{{ a.title }}</a
@@ -50,7 +50,7 @@
                   <ul>
                     <li v-for="t in recommendTopics" :key="t.topicId">
                       <a
-                        :href="'/topic/' + t.topicId"
+                        :href="'/bbs/topic/' + t.topicId"
                         :title="t.title"
                         target="_blank"
                         >{{ t.title }}</a

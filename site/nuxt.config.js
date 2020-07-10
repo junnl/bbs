@@ -6,6 +6,9 @@ export default {
       total: true
     }
   },
+  router: {
+    base: '/bbs/'
+  },
   mode: 'universal',
   /*
    ** Headers of the page
@@ -96,7 +99,7 @@ export default {
         id: 'ca-pub-5683711753850351',
         pageLevelAds: true
       }
-    ]
+    ],
   ],
   /*
    ** Axios module configuration
@@ -108,7 +111,10 @@ export default {
   },
 
   proxy: {
-    '/api/': 'http://127.0.0.1:8082'
+    '/bbs/api': {
+      target: 'http://127.0.0.1:8082'
+    }
+    // '/bbs/api/': 'http://127.0.0.1:8082'
     // '/api/': 'https://mlog.club'
   },
 

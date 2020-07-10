@@ -2,7 +2,7 @@
   <div v-if="links && links.length" class="widget">
     <div class="widget-header">
       <span>友情链接</span>
-      <span class="slot"><a href="/links">查看更多&gt;&gt;</a></span>
+      <span class="slot"><a href="/bbs/links">查看更多&gt;&gt;</a></span>
     </div>
     <div class="widget-content">
       <ul class="links">

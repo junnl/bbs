@@ -7,7 +7,7 @@
   >
     <div class="container">
       <div class="navbar-brand">
-        <a href="/" class="navbar-item">
+        <a href="/bbs/" class="navbar-item">
           <img :alt="config.siteTitle" src="~/assets/images/logo.png" />
         </a>
         <a
@@ -58,7 +58,7 @@
           -->
 
           <div class="navbar-item dropdown is-hoverable is-right">
-            <a href="/topic/create" title="发表话题" class="publish">
+            <a href="/bbs/topic/create" title="发表话题" class="publish">
               <i class="iconfont icon-publish"></i>
             </a>
           </div>
@@ -66,23 +66,23 @@
           <msg-notice />
 
           <div v-if="user" class="navbar-item has-dropdown is-hoverable">
-            <a :href="'/user/' + user.id" class="navbar-link">
+            <a :href="'/bbs/user/' + user.id" class="navbar-link">
               <strong>{{ user.nickname }}</strong>
             </a>
             <div class="navbar-dropdown">
-              <a class="navbar-item" href="/topic/create">
+              <a class="navbar-item" href="/bbs/topic/create">
                 <i class="iconfont icon-topic" />&nbsp;发表话题
               </a>
-              <a class="navbar-item" href="/article/create">
+              <a class="navbar-item" href="/bbs/article/create">
                 <i class="iconfont icon-publish" />&nbsp;发表文章
               </a>
-              <a class="navbar-item" href="/user/favorites">
+              <a class="navbar-item" href="/bbs/user/favorites">
                 <i class="iconfont icon-favorites" />&nbsp;我的收藏
               </a>
-              <a class="navbar-item" href="/user/settings">
+              <a class="navbar-item" href="/bbs/user/settings">
                 <i class="iconfont icon-username" />&nbsp;编辑资料
               </a>
-              <a v-if="isOwnerOrAdmin" class="navbar-item" href="/admin">
+              <a v-if="isOwnerOrAdmin" class="navbar-item" href="/bbs/admin">
                 <i class="iconfont icon-dashboard" />&nbsp;后台管理
               </a>
               <a @click="signout" class="navbar-item">

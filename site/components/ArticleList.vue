@@ -15,7 +15,7 @@
         itemtype="http://schema.org/BlogPosting"
       >
         <h1 class="article-title" itemprop="headline">
-          <a :href="'/article/' + article.articleId">{{ article.title }}</a>
+          <a :href="'/bbs/article/' + article.articleId">{{ article.title }}</a>
         </h1>
 
         <div class="article-summary" itemprop="description">
@@ -26,7 +26,7 @@
           <span class="article-meta-item">
             由
             <a
-              :href="'/user/' + article.user.id"
+              :href="'/bbs/user/' + article.user.id"
               class="article-author"
               itemprop="author"
               itemscope
@@ -49,7 +49,9 @@
               :key="tag.tagId"
               class="article-tag tag"
             >
-              <a :href="'/articles/' + tag.tagId" class>{{ tag.tagName }}</a>
+              <a :href="'/bbs/articles/' + tag.tagId" class>{{
+                tag.tagName
+              }}</a>
             </span>
           </span>
 

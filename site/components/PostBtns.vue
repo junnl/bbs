@@ -14,7 +14,7 @@
       </svg>
       <span>发布话题</span>
     </a>
-    <a href="/article/create" class="aside-actions-btn">
+    <a href="/bbs/article/create" class="aside-actions-btn">
       <svg
         viewBox="0 0 1034 1024"
         xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ export default {
   },
   computed: {
     createTopicUrl() {
-      let url = '/topic/create'
+      let url = '/bbs/topic/create'
       if (this.currentNodeId) {
         url += '?nodeId=' + this.currentNodeId
       }

@@ -4,9 +4,9 @@
       <div class="left-container">
         <nav class="breadcrumb my-breadcrumb">
           <ul>
-            <li><a href="article">首页</a></li>
+            <li><a href="/bbs/">首页</a></li>
             <li>
-              <a :href="'/user/' + user.id + '?tab=topics'">{{
+              <a :href="'/bbs/user/' + user.id + '?tab=topics'">{{
                 user.nickname
               }}</a>
             </li>
@@ -19,7 +19,7 @@
         <topic-list :topics="topicsPage.results" />
         <pagination
           :page="topicsPage.page"
-          :url-prefix="'/user/' + user.id + '/topics/'"
+          :url-prefix="'/bbs/user/' + user.id + '/topics/'"
         />
       </div>
       <user-center-sidebar :user="user" />

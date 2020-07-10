@@ -6,9 +6,9 @@
           <div class="widget-header">
             <nav class="breadcrumb">
               <ul>
-                <li><a href="/">首页</a></li>
+                <li><a href="/bbs/">首页</a></li>
                 <li>
-                  <a :href="'/user/' + user.id + '?tab=topics'">{{
+                  <a :href="'/bbs/user/' + user.id + '?tab=topics'">{{
                     user.nickname
                   }}</a>
                 </li>
@@ -195,7 +195,7 @@ export default {
         this.$toast.success('提交成功', {
           duration: 1000,
           onComplete() {
-            utils.linkTo('/topic/' + topic.topicId)
+            utils.linkTo('/bbs/topic/' + topic.topicId)
           }
         })
       } catch (e) {

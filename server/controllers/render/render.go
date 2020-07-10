@@ -562,7 +562,7 @@ func BuildHtmlContent(htmlContent string) string {
 		src := selection.AttrOr("src", "")
 		// 处理第三方图片
 		if strings.Contains(src, "qpic.cn") {
-			src = simple.ParseUrl("/api/img/proxy").AddQuery("url", src).BuildStr()
+			src = simple.ParseUrl("/bbs/api/img/proxy").AddQuery("url", src).BuildStr()
 			// selection.SetAttr("src", src)
 		}
 

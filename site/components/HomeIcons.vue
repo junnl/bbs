@@ -2,12 +2,12 @@
   <div class="home-icons">
     <div class="item">
       <div class="icon">
-        <a href="/topics"
+        <a href="/bbs/topics"
           ><i class="iconfont icon-topic" style="color:#ef7853;"></i
         ></a>
       </div>
       <div class="text">
-        <a href="/topics">码农社区 <i class="iconfont icon-arrowright"></i></a>
+        <a href="/bbs/topics">码农社区 <i class="iconfont icon-arrowright"></i></a>
       </div>
     </div>
     <!--
@@ -26,36 +26,36 @@
     -->
     <div class="item">
       <div class="icon">
-        <a href="/topic/40"
+        <a href="/bbs/topic/40"
           ><i class="iconfont icon-book" style="color:#fee83c;"></i
         ></a>
       </div>
       <div class="text">
-        <a href="/topic/40"
+        <a href="/bbs/topic/40"
           >在线书籍 <i class="iconfont icon-arrowright"></i
         ></a>
       </div>
     </div>
     <div class="item">
       <div class="icon">
-        <a href="/projects"
+        <a href="/bbs/projects"
           ><i class="iconfont icon-open-source" style="color:#4c90e3;"></i
         ></a>
       </div>
       <div class="text">
-        <a href="/projects"
+        <a href="/bbs/projects"
           >开源项目 <i class="iconfont icon-arrowright"></i
         ></a>
       </div>
     </div>
     <div class="item">
       <div class="icon">
-        <a href="/links"
+        <a href="/bbs/links"
           ><i class="iconfont icon-blog" style="color:#21d503;"></i
         ></a>
       </div>
       <div class="text">
-        <a href="/links">博客导航 <i class="iconfont icon-arrowright"></i></a>
+        <a href="/bbs/links">博客导航 <i class="iconfont icon-arrowright"></i></a>
       </div>
     </div>
   </div>

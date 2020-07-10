@@ -3,9 +3,9 @@
     <footer class="footer">
       <div class="container content">
         <div>
-          <a href="/about">关于</a>
-          <a href="/tags">标签</a>
-          <a href="/links">友链</a>
+          <a href="/bbs/about">关于</a>
+          <a href="/bbs/tags">标签</a>
+          <a href="/bbs/links">友链</a>
         </div>
         <div>
           © 2019 Powered by

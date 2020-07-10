@@ -33,7 +33,7 @@
               itemscope
               itemtype="http://schema.org/Person"
             >
-              <a :href="'/user/' + comment.user.id" itemprop="name">
+              <a :href="'/bbs/user/' + comment.user.id" itemprop="name">
                 {{ comment.user.nickname }}
               </a>
             </span>

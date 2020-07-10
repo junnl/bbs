@@ -5,7 +5,7 @@
         <div class="tabs">
           <ul>
             <li :class="{ 'is-active': activeTab === 'topics' }">
-              <a :href="'/user/' + user.id + '?tab=topics'">
+              <a :href="'/bbs/user/' + user.id + '?tab=topics'">
                 <span class="icon is-small">
                   <i class="iconfont icon-topic" aria-hidden="true" />
                 </span>
@@ -13,7 +13,7 @@
               </a>
             </li>
             <li :class="{ 'is-active': activeTab === 'articles' }">
-              <a :href="'/user/' + user.id + '?tab=articles'">
+              <a :href="'/bbs/user/' + user.id + '?tab=articles'">
                 <span class="icon is-small">
                   <i class="iconfont icon-article" aria-hidden="true" />
                 </span>
@@ -27,7 +27,7 @@
           <div v-if="recentTopics && recentTopics.length">
             <topic-list :topics="recentTopics" />
             <div class="more">
-              <a :href="'/user/' + user.id + '/topics'">查看更多&gt;&gt;</a>
+              <a :href="'/bbs/user/' + user.id + '/topics'">查看更多&gt;&gt;</a>
             </div>
           </div>
           <div v-else class="notification is-primary" style="margin-top: 10px;">
@@ -39,7 +39,9 @@
           <div v-if="recentArticles && recentArticles.length">
             <article-list :articles="recentArticles" />
             <div class="more">
-              <a :href="'/user/' + user.id + '/articles'">查看更多&gt;&gt;</a>
+              <a :href="'/bbs/user/' + user.id + '/articles'">
+                查看更多&gt;&gt;
+              </a>
             </div>
           </div>
           <div v-else class="notification is-primary" style="margin-top: 10px;">

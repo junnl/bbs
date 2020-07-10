@@ -4,20 +4,21 @@ import (
 	"bbs-go/common/urls"
 	"bbs-go/model/constants"
 	"bbs-go/services"
+
 	"github.com/kataras/iris/v12"
 	"github.com/mlogclub/simple"
 )
 
 var (
 	config = []PathRole{
-		{Pattern: "/api/admin/sys-config/**", Roles: []string{constants.RoleOwner}},
-		{Pattern: "/api/admin/user/create", Roles: []string{constants.RoleOwner}},
-		{Pattern: "/api/admin/user/update", Roles: []string{constants.RoleOwner}},
-		{Pattern: "/api/admin/topic-node/create", Roles: []string{constants.RoleOwner}},
-		{Pattern: "/api/admin/topic-node/update", Roles: []string{constants.RoleOwner}},
-		{Pattern: "/api/admin/tag/create", Roles: []string{constants.RoleOwner}},
-		{Pattern: "/api/admin/tag/update", Roles: []string{constants.RoleOwner}},
-		{Pattern: "/api/admin/**", Roles: []string{constants.RoleOwner, constants.RoleAdmin}},
+		{Pattern: "/bbs/api/admin/sys-config/**", Roles: []string{constants.RoleOwner}},
+		{Pattern: "/bbs/api/admin/user/create", Roles: []string{constants.RoleOwner}},
+		{Pattern: "/bbs/api/admin/user/update", Roles: []string{constants.RoleOwner}},
+		{Pattern: "/bbs/api/admin/topic-node/create", Roles: []string{constants.RoleOwner}},
+		{Pattern: "/bbs/api/admin/topic-node/update", Roles: []string{constants.RoleOwner}},
+		{Pattern: "/bbs/api/admin/tag/create", Roles: []string{constants.RoleOwner}},
+		{Pattern: "/bbs/api/admin/tag/update", Roles: []string{constants.RoleOwner}},
+		{Pattern: "/bbs/api/admin/**", Roles: []string{constants.RoleOwner, constants.RoleAdmin}},
 	}
 	antPathMatcher = urls.NewAntPathMatcher()
 )

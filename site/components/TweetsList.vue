@@ -5,14 +5,17 @@
         <div class="pin-header-row">
           <div class="account-group">
             <div>
-              <a :href="'/user/' + tweet.user.id" :title="tweet.user.nickname">
+              <a
+                :href="'/bbs/user/' + tweet.user.id"
+                :title="tweet.user.nickname"
+              >
                 <img :src="tweet.user.smallAvatar" class="avatar size-45" />
               </a>
             </div>
             <div class="pin-header-content">
               <div>
                 <a
-                  :href="'/user/' + tweet.user.id"
+                  :href="'/bbs/user/' + tweet.user.id"
                   :title="tweet.user.nickname"
                   target="_blank"
                   class="nickname"
@@ -36,7 +39,7 @@
           </div>
         </div>
         <div class="pin-content-row">
-          <a :href="'/tweet/' + tweet.tweetId" class="content-box">{{
+          <a :href="'/bbs/tweet/' + tweet.tweetId" class="content-box">{{
             tweet.content
           }}</a>
         </div>
@@ -45,7 +48,7 @@
           class="pin-image-row"
         >
           <li v-for="(image, index) in tweet.imageList" :key="image + index">
-            <a :href="'/tweet/' + tweet.tweetId" class="image-item">
+            <a :href="'/bbs/tweet/' + tweet.tweetId" class="image-item">
               <img v-lazy="image.preview" />
             </a>
           </li>
@@ -60,7 +63,10 @@
                 }}</span>
               </div>
             </div>
-            <a :href="'/tweet/' + tweet.tweetId" class="comment-action action">
+            <a
+              :href="'/bbs/tweet/' + tweet.tweetId"
+              class="comment-action action"
+            >
               <div class="action-title-box">
                 <i class="iconfont icon-comments" />
                 <span class="action-title">{{

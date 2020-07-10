@@ -23,7 +23,7 @@ func (c *CaptchaController) GetRequest() *simple.JsonResult {
 	} else {
 		captchaId = captcha.NewLen(4)
 	}
-	captchaUrl := urls.AbsUrl("/api/captcha/show?captchaId=" + captchaId + "&r=" + simple.UUID())
+	captchaUrl := urls.AbsUrl("/bbs/api/captcha/show?captchaId=" + captchaId + "&r=" + simple.UUID())
 	return simple.NewEmptyRspBuilder().
 		Put("captchaId", captchaId).
 		Put("captchaUrl", captchaUrl).

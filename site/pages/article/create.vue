@@ -6,9 +6,9 @@
           <div class="widget-header">
             <nav class="breadcrumb">
               <ul>
-                <li><a href="/">首页</a></li>
+                <li><a href="/bbs/">首页</a></li>
                 <li>
-                  <a :href="'/user/' + user.id + '?tab=articles'">{{
+                  <a :href="'/bbs/user/' + user.id + '?tab=articles'">{{
                     user.nickname
                   }}</a>
                 </li>

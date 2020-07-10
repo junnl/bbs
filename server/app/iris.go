@@ -41,7 +41,7 @@ func InitIris() {
 	app.OnAnyErrorCode(func(ctx iris.Context) {
 		path := ctx.Path()
 		var err error
-		if strings.Contains(path, "/api/admin/") {
+		if strings.Contains(path, "/bbs/api/admin/") {
 			_, err = ctx.JSON(simple.JsonErrorCode(ctx.GetStatusCode(), "Http error"))
 		}
 		if err != nil {
@@ -54,7 +54,7 @@ func InitIris() {
 	})
 
 	// api
-	mvc.Configure(app.Party("/api"), func(m *mvc.Application) {
+	mvc.Configure(app.Party("/bbs/api"), func(m *mvc.Application) {
 		m.Party("/topic").Handle(new(api.TopicController))
 		m.Party("/tweet").Handle(new(api.TweetController))
 		m.Party("/article").Handle(new(api.ArticleController))
@@ -72,7 +72,7 @@ func InitIris() {
 	})
 
 	// admin
-	mvc.Configure(app.Party("/api/admin"), func(m *mvc.Application) {
+	mvc.Configure(app.Party("/bbs/api/admin"), func(m *mvc.Application) {
 		m.Router.Use(middleware.AdminAuth)
 		m.Party("/common").Handle(new(admin.CommonController))
 		m.Party("/user").Handle(new(admin.UserController))
@@ -92,7 +92,7 @@ func InitIris() {
 		m.Party("/operate-log").Handle(new(admin.OperateLogController))
 	})
 
-	app.Get("/api/img/proxy", func(i iris.Context) {
+	app.Get("/bbs/api/img/proxy", func(i iris.Context) {
 		url := i.FormValue("url")
 		resp, err := resty.New().R().Get(url)
 		i.Header("Content-Type", "image/jpg")

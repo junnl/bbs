@@ -6,9 +6,9 @@
           <div class="widget-header">
             <nav class="breadcrumb">
               <ul>
-                <li><a href="/">首页</a></li>
+                <li><a href="/bbs/">首页</a></li>
                 <li>
-                  <a :href="'/user/' + currentUser.id">{{
+                  <a :href="'/bbs/user/' + currentUser.id">{{
                     currentUser.nickname
                   }}</a>
                 </li>
@@ -35,19 +35,21 @@
                     {{ favorite.content }}
                   </div>
                   <div class="article-meta">
+                    <span class="article-meta-item">
+                      <a :href="'/bbs/user/' + favorite.user.id">
+                        {{ favorite.user.nickname }}
+                      </a>
+                    </span>
                     <span class="article-meta-item"
-                      ><a :href="'/user/' + favorite.user.id">{{
-                        favorite.user.nickname
-                      }}</a></span
-                    >
-                    <span class="article-meta-item"
-                      ><time>{{ favorite.createTime | prettyDate }}</time></span
-                    >
+                      ><time>{{ favorite.createTime | prettyDate }}</time>
+                    </span>
                   </div>
                 </article>
               </li>
               <li v-if="hasMore" class="more">
-                <a @click="list">查看更多&gt;&gt;</a>
+                <a @click="list">
+                  查看更多&gt;&gt;
+                </a>
               </li>
             </ul>
           </div>

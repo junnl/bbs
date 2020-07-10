@@ -15,7 +15,7 @@
           </div>
           <div class="project-header">
             <h1 itemprop="headline">
-              <a :href="'/project/' + p.projectId">
+              <a :href="'/bbs/project/' + p.projectId">
                 <span class="project-name">{{ p.name }}</span>
                 <span v-if="p.title" class="project-title"
                   >&nbsp;-&nbsp;{{ p.title }}</span
@@ -32,7 +32,7 @@
               itemscope
               itemtype="http://schema.org/Person"
             >
-              <a :href="'/user/' + p.user.id" itemprop="name">{{
+              <a :href="'/bbs/user/' + p.user.id" itemprop="name">{{
                 p.user.nickname
               }}</a>
             </span>

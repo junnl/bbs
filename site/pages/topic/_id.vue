@@ -12,7 +12,7 @@
               <div class="topic-header">
                 <div class="topic-header-left">
                   <a
-                    :href="'/user/' + topic.user.id"
+                    :href="'/bbs/user/' + topic.user.id"
                     :title="topic.user.nickname"
                   >
                     <img :src="topic.user.smallAvatar" class="avatar size-45" />
@@ -46,7 +46,7 @@
                     <span class="meta-item">
                       <a
                         v-if="topic.node"
-                        :href="'/topics/node/' + topic.node.nodeId"
+                        :href="'/bbs/topics/node/' + topic.node.nodeId"
                         class="node"
                         >{{ topic.node.name }}</a
                       >
@@ -57,7 +57,7 @@
                         :key="tag.tagId"
                         class="tag"
                       >
-                        <a :href="'/topics/tag/' + tag.tagId">{{
+                        <a :href="'/bbs/topics/tag/' + tag.tagId">{{
                           tag.tagName
                         }}</a>
                       </span>
@@ -68,7 +68,7 @@
                       </a>
                     </span>
                     <span v-if="hasPermission" class="meta-item act">
-                      <a :href="'/topic/edit/' + topic.topicId">
+                      <a :href="'/bbs/topic/edit/' + topic.topicId">
                         <i class="iconfont icon-edit" />&nbsp;修改
                       </a>
                     </span>
@@ -136,7 +136,7 @@
                 </div>
                 <div v-for="likeUser in likeUsers" :key="likeUser.id">
                   <a
-                    :href="'/user/' + likeUser.id"
+                    :href="'/bbs/user/' + likeUser.id"
                     :alt="likeUser.nickname"
                     target="_blank"
                   >
@@ -163,7 +163,7 @@
         <div class="right-container">
           <a
             class="button is-success"
-            href="/topic/create"
+            href="/bbs/topic/create"
             style="width: 100%;"
           >
             <span class="icon"><i class="iconfont icon-topic"/></span>
@@ -171,7 +171,10 @@
           </a>
           <div class="user-simple">
             <div class="base-info">
-              <a :href="'/user/' + topic.user.id" :alt="topic.user.nickname">
+              <a
+                :href="'/bbs/user/' + topic.user.id"
+                :alt="topic.user.nickname"
+              >
                 <img
                   :src="topic.user.smallAvatar"
                   :alt="topic.user.nickname"
@@ -180,7 +183,7 @@
               </a>
               <div class="nickname">
                 <a
-                  :href="'/user/' + topic.user.id"
+                  :href="'/bbs/user/' + topic.user.id"
                   :alt="topic.user.nickname"
                   >{{ topic.user.nickname }}</a
                 >

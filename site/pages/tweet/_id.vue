@@ -7,7 +7,7 @@
             <div class="account-group">
               <div>
                 <a
-                  :href="'/user/' + tweet.user.id"
+                  :href="'/bbs/user/' + tweet.user.id"
                   :title="tweet.user.nickname"
                 >
                   <img :src="tweet.user.smallAvatar" class="avatar size-45" />
@@ -16,7 +16,7 @@
               <div class="pin-header-content">
                 <div>
                   <a
-                    :href="'/user/' + tweet.user.id"
+                    :href="'/bbs/user/' + tweet.user.id"
                     :title="tweet.user.nickname"
                     target="_blank"
                     class="nickname"

@@ -7,10 +7,10 @@
             <nav class="breadcrumb">
               <ul>
                 <li>
-                  <a href="/">首页</a>
+                  <a href="/bbs/">首页</a>
                 </li>
                 <li>
-                  <a :href="'/user/' + currentUser.id">{{
+                  <a :href="'/bbs/user/' + currentUser.id">{{
                     currentUser.nickname
                   }}</a>
                 </li>
@@ -37,9 +37,9 @@
                 <div class="message-item-right">
                   <div class="message-item-meta">
                     <span v-if="message.from.id > 0" class="nickname">
-                      <a :href="'/user/' + message.from.id" target="_blank">{{
-                        message.from.nickname
-                      }}</a>
+                      <a :href="'/bbs/user/' + message.from.id" target="_blank">
+                        {{ message.from.nickname }}
+                      </a>
                     </span>
                     <span v-else class="nickname">
                       <a href="javascript:void(0)" target="_blank">{{
