@@ -3,7 +3,7 @@
     <div class="container main-container is-white left-main">
       <div class="left-container">
         <project-list :projects="projectPage.results" />
-        <pagination :page="projectPage.page" url-prefix="/projects/" />
+        <pagination :page="projectPage.page" url-prefix="/bbs/projects/" />
       </div>
       <div class="right-container">
         <site-notice />

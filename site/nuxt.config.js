@@ -6,6 +6,7 @@ export default {
       total: true
     }
   },
+  telemetry: false,
   router: {
     base: '/bbs/'
   },

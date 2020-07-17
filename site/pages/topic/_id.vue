@@ -317,7 +317,7 @@ export default {
         this.$toast.success('删除成功', {
           duration: 2000,
           onComplete() {
-            utils.linkTo('/topics')
+            utils.linkTo('/bbs/topics')
           }
         })
       } catch (e) {

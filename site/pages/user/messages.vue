@@ -77,7 +77,7 @@
             </div>
             <pagination
               :page="messagesPage.page"
-              url-prefix="/user/messages?p="
+              url-prefix="/bbs/user/messages?p="
             />
           </div>
         </div>

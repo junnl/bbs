@@ -29,7 +29,7 @@
                 </div>
               </li>
             </ul>
-            <pagination :page="linksPage.page" url-prefix="/links/" />
+            <pagination :page="linksPage.page" url-prefix="/bbs/links/" />
           </div>
         </div>
       </div>

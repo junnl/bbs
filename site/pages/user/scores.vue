@@ -29,7 +29,7 @@
             </ul>
             <pagination
               :page="scoreLogsPage.page"
-              url-prefix="/user/scores?p="
+              url-prefix="/bbs/user/scores?p="
             />
           </div>
         </div>

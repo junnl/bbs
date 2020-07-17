@@ -7,7 +7,7 @@
           <topic-list :topics="topicsPage.results" :show-ad="true" />
           <pagination
             :page="topicsPage.page"
-            url-prefix="/topics/node/newest?p="
+            url-prefix="/bbs/topics/node/newest?p="
           />
         </div>
       </div>

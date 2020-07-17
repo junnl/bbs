@@ -24,7 +24,7 @@
                   </span>
                 </div>
               </div>
-              <pagination :page="tagsPage.page" url-prefix="/tags/" />
+              <pagination :page="tagsPage.page" url-prefix="/bbs/tags/" />
             </div>
           </div>
         </div>
