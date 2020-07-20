@@ -2,15 +2,15 @@
   <div>
     <footer class="footer">
       <div class="container content">
-        <div>
+        <!-- <div>
           <a href="/bbs/about">关于</a>
           <a href="/bbs/tags">标签</a>
           <a href="/bbs/links">友链</a>
-        </div>
+        </div> -->
         <div>
           © 2019 Powered by
-          <a href="http://docs.bbs-go.com" target="_blank" class="light"
-            >BBS-GO</a
+          <a href="https://www.prism-advisor.com" target="_blank" class="light"
+            >PRISM</a
           >
         </div>
       </div>

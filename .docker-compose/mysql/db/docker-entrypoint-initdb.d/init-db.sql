@@ -39,7 +39,7 @@ INSERT INTO t_user (
     `description`
 ) SELECT
     1,
-    'admin',
+    'junl',
     '站长',
     '',
     'a@example.com',

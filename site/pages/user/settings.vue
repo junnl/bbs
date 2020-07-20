@@ -12,9 +12,9 @@
                 <li>
                   <a :href="'/bbs/user/' + user.id">{{ user.nickname }}</a>
                 </li>
-                <li class="is-active">
+                <!-- <li class="is-active">
                   <a href="#" aria-current="page">编辑资料</a>
-                </li>
+                </li> -->
               </ul>
             </nav>
           </div>

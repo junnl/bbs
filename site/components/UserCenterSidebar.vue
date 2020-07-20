@@ -23,10 +23,10 @@
           >
         </div>
         <ul v-if="isOwner" class="operations">
-          <li>
+          <!-- <li>
             <i class="iconfont icon-edit" />
             <a href="/bbs/user/settings">&nbsp;编辑资料</a>
-          </li>
+          </li> -->
           <li>
             <i class="iconfont icon-message" />
             <a href="/bbs/user/messages">&nbsp;消息</a>

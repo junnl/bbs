@@ -107,8 +107,8 @@ export default {
         },
         upload: {
           accept: 'image/*',
-          url: '/api/upload/editor?userToken=' + userToken,
-          linkToImgUrl: '/api/upload/fetch?userToken=' + userToken,
+          url: '/bbs/api/upload/editor?userToken=' + userToken,
+          linkToImgUrl: '/bbs/api/upload/fetch?userToken=' + userToken,
           filename(name) {
             return name.replace(/\?|\\|\/|:|\||<|>|\*|\[|\]|\s+/g, '-')
           }

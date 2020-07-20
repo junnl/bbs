@@ -25,7 +25,7 @@ export default {
       { name: 'window-target', content: '_top' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/bbs/favicon.ico' },
       {
         rel: 'alternate',
         type: 'application/atom+xml',

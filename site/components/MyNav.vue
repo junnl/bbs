@@ -79,15 +79,15 @@
               <a class="navbar-item" href="/bbs/user/favorites">
                 <i class="iconfont icon-favorites" />&nbsp;我的收藏
               </a>
-              <a class="navbar-item" href="/bbs/user/settings">
+              <!-- <a class="navbar-item" href="/bbs/user/settings">
                 <i class="iconfont icon-username" />&nbsp;编辑资料
-              </a>
+              </a> -->
               <a v-if="isOwnerOrAdmin" class="navbar-item" href="/bbs/admin">
                 <i class="iconfont icon-dashboard" />&nbsp;后台管理
               </a>
-              <a @click="signout" class="navbar-item">
+              <!-- <a @click="signout" class="navbar-item">
                 <i class="iconfont icon-log-out" />&nbsp;退出登录
-              </a>
+              </a> -->
             </div>
           </div>
           <div v-else class="navbar-item">
