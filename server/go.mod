@@ -27,7 +27,8 @@ require (
 	github.com/mattn/go-colorable v0.1.4 // indirect
 	github.com/mlogclub/simple v1.0.63
 	github.com/moul/http2curl v1.0.0 // indirect
-	github.com/nats-io/nats-server/v2 v2.1.2 // indirect
+	github.com/nats-io/jwt v0.3.2 // indirect
+	github.com/nats-io/nats-server/v2 v2.7.4 // indirect
 	github.com/robfig/cron v1.2.0
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
